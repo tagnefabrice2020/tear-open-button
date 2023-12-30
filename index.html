@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            min-width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background-color: #fff;
+            border: 2px dotted #eee;
+            color: #b2aeae;
+            padding: 1rem 6rem;
+            border-radius: 100px;
+            cursor: pointer;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .left__icon-container {
+            background-color: #BCE25D;
+            width: 1.75rem;
+            height: 1.75rem;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 100px;
+
+            position: absolute;
+            left: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .animation__container {
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background-color: #E8E8E8;
+            inset: 0;
+
+            z-index: 999;
+
+            display: flex;
+
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+
+            transition-property: width;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+
+        }
+
+        button:hover .animation__container {
+            width: 20%;
+        }
+
+        .cover {
+            width: 100%;
+            position: absolute;
+            left: 100%;
+            height: 100%;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), -1px 0px 4px rgba(0, 0, 0, 0.4); */
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03),
+                0px 4px 8px rgba(0, 0, 0, 0.2),
+                -1px 0px 8px rgba(0, 0, 0, 0.09);
+
+            background: linear-gradient(90deg, rgba(238, 238, 238, 1) 0%, rgba(235, 235, 235, 0.8435574913559174) 11%, rgba(255, 255, 255, 1) 28%, rgba(231, 230, 230, 1) 62%, rgba(227, 227, 227, 1) 87%, rgba(232, 232, 232, 1) 89%, rgba(238, 238, 238, 1) 99%);
+        }
+    </style>
+</head>
+
+<body>
+    <button>
+        <span class="animation__container">
+            <span class="cover"></span>
+        </span>
+        <span>
+            <span class="left__icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-arrow-right-short" color="#fff" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                </svg></span>
+            <p>Tear open</p>
+        </span>
+    </button>
+</body>
+
+</html>
